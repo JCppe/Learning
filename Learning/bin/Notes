@@ -1,0 +1,6 @@
+##Notes##
+
+& evaluates both sides of the operation.
+&& evaluates the left side of the operation, if it's true, it continues and evaluates the right side.
+
+A void method is also called a procedure

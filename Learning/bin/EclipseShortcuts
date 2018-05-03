@@ -1,0 +1,24 @@
+##Eclipse Shortcuts##
+
+ctrl + shift + L = view all shortcuts
+
+ctrl + space = autocomplete / suggestion
+
+End = move cursor to end of line
+Home = move cursor to beginning of line
+
+shift + End = select line to end
+
+ctrl = f11 = run last file
+
+ctrl + shift + / = collapse all methods
+
+strl + + = text size
+
+
+
+
+
+
+##Ecplise ShortHand##
+sysout = System.out.println();
