@@ -12,10 +12,14 @@ public class JavaMasterClass {
 		// randOne();
 		// charAndBoolean();
 		// string();
-		operators();
+		// operators();
+		//statementsWhitespaceAndIndenting();
+		//codeBlocks();
+		methods();
 
 	}
 
+	@SuppressWarnings("unused")
 	public static void variables() {
 
 		// int has a width of 32
@@ -38,6 +42,7 @@ public class JavaMasterClass {
 		System.out.println(l1 + "   " + s2);
 	}
 
+	@SuppressWarnings("unused")
 	public static void floatAndDouble() {
 		// width of int = 32 (4 bytes)
 		int i1 = 5 / 3;
@@ -87,6 +92,7 @@ public class JavaMasterClass {
 
 	}
 
+	@SuppressWarnings("unused")
 	public static void charAndBoolean() {
 
 		char c1 = 'A';
@@ -162,4 +168,128 @@ public class JavaMasterClass {
 
 	}
 
+	@SuppressWarnings("unused")
+	public static void statementsWhitespaceAndIndenting() {
+
+		int                myVariable 
+			= 
+			50;
+		
+		System.out.println("This line is a statement");
+
+		System.out.println("These" + "lines" + "are also" + "a statement");
+
+		int anotherVar = 5; anotherVar++; System.out.println("another one");
+		
+	}
+
+	public static void codeBlocks() {
+		
+		boolean gameOver = true;
+		int score = 800;
+		int levelCompleted = 5;
+		int bonus = 100;
+		
+		if (score == 4000)
+			System.out.println("Your score was 5000");
+			System.out.println("Not part of if");
+			
+		if (score < 5000 && score > 1000) {
+			System.out.println("First if");
+		} else if (score < 1000) { 
+			System.out.println("else if");
+		}else {
+			System.out.println("Else");
+		}
+		
+		if (gameOver == true) { // (gameOver) = (gameOver == true)
+			int finalScore = score+ (levelCompleted * bonus);
+			System.out.println("Your final score was " + finalScore);
+			
+		}
+		
+		// cannot use variable inside code block from outside
+		//int savedFinalScore = finalScore;
+		
+		score = 10000;
+		levelCompleted = 8;
+		bonus = 200;
+		
+		if (gameOver) {
+			int finalScore = score + (levelCompleted * bonus);
+			System.out.println("Your final score was " + finalScore);
+		}
+		
+		
+		
+		
+		
+	}
+
+	public static void methods() {
+		
+		boolean gameOver = true;
+		int score = 800;
+		int levelCompleted = 5;
+		int bonus = 100;
+		                          //arguments
+		int highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+		System.out.println(highScore);
+		
+		score = 10000;
+		levelCompleted = 8;
+		bonus = 200;
+		
+		highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+		System.out.println(highScore);
+		
+		//or
+		highScore = calculateScore(true, 800, 5, 100);
+		System.out.println(highScore);
+		
+		//challenge
+		highScore = 1000;
+		String playerName = "John";
+		int position = calculatehighScorePosition(highScore);
+		displayHighScorePosition(playerName, highScore, position);
+		
+	}
+	                                                     //parameters
+	public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+		
+		if (gameOver) {
+			int finalScore = score + (levelCompleted * bonus);
+			//System.out.println("Your final score was " + finalScore);
+			return finalScore;
+		}
+		
+		// once the first return is executed the method is terminated
+		// -1 is the convention for indicating an error or value not found
+		return -1;
+		
+	}
+	
+	public static void displayHighScorePosition(String playerName, int highScore, int position) {
+	
+		System.out.println(playerName + "'s high score is: " + highScore + "\nAnd is in position: " + position);
+		
+	}
+	
+	public static int calculatehighScorePosition(int highScore) {
+		
+		if (highScore >= 1000) {
+			return 1;
+		} else if (highScore >= 500) {
+			return 2;
+		} else if( highScore >= 100) {
+			return 3;
+		} else {
+			return 4;
+		}
+		// or you can put last return here instead of in last else
+		//return 4;
+		
+	}
+	
+	
 }
