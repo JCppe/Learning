@@ -1,0 +1,33 @@
+body {
+	/*background: url(https://upload.wikimedia.org/wikipedia/en/3/3d/MountainAshFloor.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background: orange;
+}
+
+h1 {
+	/*color: rgb(50,50,150);
+	border-color: purple;
+	border-width: 5px;
+	border-style: solid;
+
+	border: 8px dashed rgba(50,50,150,.2);*/
+}
+
+h4 {
+	color: #AA33FF;
+	background: rgb(255, 100, 80);
+}
+
+li {
+	color: rgba(50,50,150,.8);
+	background: yellow;
+}
+
+#wats {
+	background: white;
+}
+
+.completed {
+	text-decoration: line-through;
+}
